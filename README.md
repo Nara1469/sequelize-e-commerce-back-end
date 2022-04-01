@@ -17,11 +17,11 @@ Bootcamp Week13: Homework
 
 Internet retail, also known as **e-commerce**, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. For understanding the fundamental architecture of e-commerce platforms, my task is to build the back end for an e-commerce site by modifying the starter code, uses the following technologies:
 
-  * Connects to a MySQL database using the [MySQL2](https://www.npmjs.com/package/mysql) and [Sequelize](https://www.npmjs.com/package/sequelize) packages.
+- Connects to a MySQL database using the [MySQL2](https://www.npmjs.com/package/mysql) and [Sequelize](https://www.npmjs.com/package/sequelize) packages.
 
-  * Stores sensitive data, like a user’s MySQL username, password, and database name, using environment variables through the [dotenv](https://www.npmjs.com/package/dotenv) package.
+- Stores sensitive data, like a user’s MySQL username, password, and database name, using environment variables through the [dotenv](https://www.npmjs.com/package/dotenv) package.
 
-  * Syncs Sequelize models to a MySQL database on the server start.
+- Syncs Sequelize models to a MySQL database on the server start.
 
 ## User Story
 
@@ -78,21 +78,21 @@ The Sequelize models execute the following relationships using association metho
 
 This application is invoked after the database is created and seeded with test data. Once your server is started and the Sequelize models are synced to the MySQL database, you can see the results in Insomnia.
 
-In `models` directory, the all table relationship models are defined using association method in `index.js` file. Also, I created the Sequelize models for all four tables used in the application: `Category.js`, `Product.js`, `Tag.js`, and `ProductTag.js`. 
+In the `models` directory, all table relationship models are defined using the association method in `index.js` file. Also, I created the Sequelize models for all four tables used in the application: `Category.js`, `Product.js`, `Tag.js`, and `ProductTag.js`. 
 
-In `routes` directory, the API routes are defined for categories, products, and tags: `product-routes.js`, `tag-routes.js`, and `category-routes.js`. The data for each of these routes is displayed in a formatted JSON.
+In the `routes` directory, the API routes are defined for categories, products, and tags: `product-routes.js`, `tag-routes.js`, and `category-routes.js`. The data for each of these routes are displayed in a formatted JSON.
 
 **Note** The functionality for creating the many-to-many relationship for products has already been completed in the starter code.
 
-After the Sequelize models and API routes were created, the CRUD operations needs to created for each model using its own routes. To successfully read, create, update, and delete data in the database, the following options are created in Insomnia:
+After the Sequelize models and API routes were created, the CRUD operations need to be created for each model using its own routes. To successfully read, create, update, and delete data in the database, the following options are created in Insomnia:
 
--  the application's GET routes to return all categories, all products, and all tag: “GET tags,” “GET Categories,” and “GET All Products.”.
+-  the application's GET routes to return all categories, all products, and all tags: “GET tags,” “GET Categories,” and “GET All Products.”.
 
 - the application's GET routes to return a single category, a single product, and a single tag: “GET tag by id,” “GET Category by ID,” and “GET One Product.
 
 - the application's POST, PUT, and DELETE routes for categories: “DELETE Category by ID,” “CREATE Category,” and “UPDATE Category.
 
-The following scheme illustrates Category, Product, and Tag data being tested in Insomnia.
+The following scheme illustrates how Category, Product, and Tag data being tested in Insomnia and full route for each table.
 
 ```
 Insomnia
@@ -123,13 +123,13 @@ E-Commerce Database
 
 > **Note**: For testing purpose, I added `producttag-routes.js` and GET - READ all ProductTag method in the application. (full route: http://localhost:3001/api/producttags/) 
 
-The following image shows how to see the application's results in Insomnia. The database CRUD operation options are separated in each models. 
+The following image shows how to see the application's results in Insomnia. The database CRUD operation options are separated in each model. 
 
 ![In Insomnia, the database CRUD operation options”.](./assets/insomnia-database.png)
 
 ## Walkthrough Video
 
-The following walkthrough videos demonstrate the CRUD operations functionality in database using Insomnia app. 
+The following walkthrough videos demonstrate the CRUD operations functionality in the database using the Insomnia app. 
 
 Walkthrough Video - on Youtube:
 
